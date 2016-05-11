@@ -300,6 +300,7 @@ class SlackBot extends Adapter
     msg.attachments = [msg.attachments] unless Array.isArray msg.attachments
 
     msg.text = data.text
+    msg.link_names = data.link_names
 
     if data.username && data.username != @robot.name
       msg.as_user = false
